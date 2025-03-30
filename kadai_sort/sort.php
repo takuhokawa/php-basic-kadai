@@ -13,9 +13,9 @@
          // ソートする関数を定義する
          function sort_2way($array, $order) {
           
-          if ($order == "a") {
+          if ($order == TRUE) {
             sort($array);
-          } else if ($order == "b") {
+          } else if ($order == FALSE) {
             rsort($array);
           }
           return $array;
@@ -26,19 +26,18 @@
 
         // 昇順にソート
         echo "昇順にソートします。<br>";
-        $sort_nums_a = sort_2way($nums, "a");
-        foreach ($sort_nums_a as $num) {
+        $sort_nums_TRUE = sort_2way($nums, TRUE);
+        foreach ($sort_nums_TRUE as $num) {
           echo $num . "<br>";
         }
 
         // 降順にソート
         echo "降順にソートします。<br>";
-        $sort_nums_b = sort_2way($nums, "b");
-        foreach ($sort_nums_b as $num) {
+        $sort_nums_FALSE = sort_2way($nums, FALSE);
+        foreach ($sort_nums_FALSE as $num) {
           echo $num . "<br>";
         }
 
-         
         ?>
     </p>
 </body>
